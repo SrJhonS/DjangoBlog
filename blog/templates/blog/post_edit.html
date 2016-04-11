@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+    {% block content %}
+        <h1>Esto ha sido una prueba de noseque</h1>
+        <form method="POST" class="post-form">{% csrf_token %}<!-- Hace que sean seguros -->
+            {{ form.as_p }}<!-- Pintamos el formulario -->
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    {% endblock %}
