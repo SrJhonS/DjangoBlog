@@ -1,0 +1,14 @@
+<div class="row">
+            {% for comment in comments %}
+                <p>{{ comment.created_date }}</p>
+                <p>{{ comment.text }}</p>
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            <h1>New post</h1>
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save</button>
+            </form>
+        </div>

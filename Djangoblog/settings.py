@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Te redirecciona a la pagina principal por defecto
+LOGIN_REDIRECT_URL='/' 
 
 # Application definition
 
