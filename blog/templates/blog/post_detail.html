@@ -5,9 +5,13 @@
         <div class="row">
             <div class="col-md-8">    
             <div class="post">
+                <a class="btn btn-default" href="{% url 'blog.views.post_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
+            {% if user == post.author %}
+                <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+                <a class="btn btn-default" href="{% url 'post_delete' pk=post.pk %}">Delete</a>
+            {% endif %}
                 <div class="date">
                     published: {{ post.published_date }}
-                    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
                 </div><br />
                 <h1>{{ post.title}}</h1><br />
                 <p>{{ post.text|linebreaks}}</p>

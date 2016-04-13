@@ -6,9 +6,9 @@
         </div>
 
         <div class="row">
-            <h1>New post</h1>
+            <h1>Comentario</h1>
             <form method="POST" class="post-form">{% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit">Save</button>
+                <button type="submit">Enviar</button>
             </form>
         </div>
