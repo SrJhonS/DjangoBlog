@@ -4,12 +4,14 @@
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
+                <!-- for p in posts  -->
+                <!-- for p in object_list -->
                 {% for p in posts %}
                     <div class="post">
                         <div class="date">
                             {{ p.published_date }}
                         </div>
-                        <h1><a href="{% url 'blog.views.post_detail' pk=p.pk %}">{{ p.title }}</a></h1>
+                        <h1><a href="{% url 'post_detail' pk=p.pk %}">{{ p.title }}</a></h1>
                         <p>{{ p.text|linebreaks }}</p>
                     </div>
                 {% endfor %}

@@ -7,7 +7,7 @@ urlpatterns = [
     # url(r'^$', 'DJangoGirls.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     
-   	url(r'^sobre-mi/', TemplateView.as_view(template_name="blog/sobre-mi.html")),
+   	url(r'^sobre-mi/', TemplateView.as_view(template_name="blog/sobre-mi.html"), name='sobre-mi'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('blog.urls')),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
